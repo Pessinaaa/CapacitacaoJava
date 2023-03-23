@@ -5,7 +5,14 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("Classe iniciada");
-		hello();
+		//hello();
+		
+		Motorista motorista = new Motorista("José", 30, "12345");
+		Carro carro = new Carro("Maria", "modelo1", "preta", 2022);
+		motorista.cadastrarCarroPrincipal(carro);
+		System.out.println(motorista.toString());
+		motorista.alteraStatus(TipoStatusEnum.TRISTE);
+		System.out.println(motorista.toString());
 	}
 	
 public static void hello() {
