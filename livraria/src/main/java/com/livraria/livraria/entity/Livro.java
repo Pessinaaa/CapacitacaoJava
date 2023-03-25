@@ -13,7 +13,7 @@ public class Livro {
 	private Long id;
 	
 	private String titulo;
-	private int ano;
+	private Integer ano;
 	
 	public String getTitulo() {
 		return titulo;
@@ -21,10 +21,10 @@ public class Livro {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public int getAno() {
+	public Integer getAno() {
 		return ano;
 	}
-	public void setAno(int ano) {
+	public void setAno(Integer ano) {
 		this.ano = ano;
 	}
 	public Long getId() {
@@ -32,5 +32,12 @@ public class Livro {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+	public Livro(String titulo, Integer ano) {
+		this.titulo = titulo;
+		this.ano = ano;
+	}
+	public Livro() {
 	}
 }
