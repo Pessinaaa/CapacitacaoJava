@@ -7,7 +7,7 @@ import { EditarComponent } from './pages/editar/editar.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent}, // A rota padrão do domínio direcioará para a rota home
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // A rota padrão do domínio direcioará para a rota home
   { path: 'home', component: HomeComponent},
   { path: 'livros', component: LivrosComponent},
   { path: 'cadastrar', component: CadastrarComponent},
