@@ -1,1 +1,16 @@
-<p>navbar works!</p>
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Livraria</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a routerLink="/livros" routerLinkActive="active" ariaCurrentWhenActive="page" routerlinkactive="active" class="nav-link">Livros</a></li>
+      <li class="nav-item"><a routerLink="/cadastrar" routerLinkActive="active" ariaCurrentWhenActive="page" routerlinkactive="active" class="nav-link">Cadastrar livro</a></li>
+      <li class="nav-item"><a routerLink="/editar" routerLinkActive="active" ariaCurrentWhenActive="page" routerlinkactive="active" class="nav-link">Editar livros</a></li>
+      <li class="nav-item"><a routerLink="/sobre" routerLinkActive="active" ariaCurrentWhenActive="page" routerlinkactive="active" class="nav-link">Sobre</a></li>
+    </ul>
+  </header>
+</div>

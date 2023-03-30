@@ -16,6 +16,7 @@ Exception in thread "main" java.util.NoSuchElementException
 public class Main {
 	static Livro livro = new Livro();
 	static int vendas;
+	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		int menu;
@@ -59,7 +60,6 @@ public class Main {
 	}
 	
 	public static void cadastrar() {
-		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("= = = = Cadastro de Livros = = = =" 
 					+ "/nDigite o nome do livro: ");
 			String nome = scanner.next();
@@ -75,7 +75,7 @@ public class Main {
 			System.out.printf("*** Imposto ISS: R$%.2f", (livro.calculoISS() * quantidade));
 			System.out.printf("*** Imposto XLP: R$%.2f", (livro.calculoXLP() * quantidade));
 			System.out.printf("*** Valor com impostos de cada livro e: R$%.2f", (livro.calculoImpostos() + preco));
-		}
+
 	}
 	
 	public static void vender() {
