@@ -14,4 +14,12 @@ export class LivrosService {
   buscarTodosLivros() {
     return this.http.get<ILivro[]>(`${this.api}/${this.endpoint}`);
   }
+
+  buscarLivroPorId(id: number) {
+    return this.http.get<ILivro>(`${this.api}/${this.endpoint}/${id}`);
+  }
+
+  cadastrarLivro(livro: ILivro) {
+    return this.http.post(`${this.api}/${this.endpoint}`, livro);
+  }
 }

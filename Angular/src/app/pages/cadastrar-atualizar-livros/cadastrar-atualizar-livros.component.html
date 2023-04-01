@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <h1 class="display-6">{{ livroId ? 'Editar' : 'Cadastrar' }}</h1>
+  <div class="container-fluid">
+    <form [formGroup]="livroForm" (ngSubmit)="cadastrar()">
+      <div class="row">
+        <div class="col-3">
+          <div class="mb-3">
+            <label for="titulo" class="form-label">Título do livro</label>
+            <input type="text" class="form-control" id="titulo" formControlName="titulo"/>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="mb-3">
+            <label for="ano" class="form-label">Ano do livro</label>
+            <input type="number" class="form-control" id="ano" formControlName="ano"/>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!livroForm.valid">{{ livroId ? 'Salvar' : 'Cadastrar' }}</button>
+    </form>
+  </div>
+</div>
