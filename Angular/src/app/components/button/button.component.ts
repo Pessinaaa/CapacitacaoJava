@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
-  @Input() color: string = "dark";
-  @Input() size: string = "";
+  @Input() title: string = "button";
+  @Input() color: string = "primary";
   @Input() disabled: boolean = false;
 
   constructor() {}

@@ -1,1 +1,20 @@
-<p>livros works!</p>
+<h1 class="display-6">Livros</h1>
+<hr>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Título</th>
+      <th scope="col">Ano</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let livro of livros">
+      <th scope="row">{{livro.id}}</th>
+      <td>{{livro.titulo || 'Livro sem título'}}</td>
+      <td>{{livro.ano}}</td>
+      <td><app-button title="Editar"/><app-button class="ms-2" color="danger" title="Deletar"/></td>
+    </tr>
+  </tbody>
+</table>

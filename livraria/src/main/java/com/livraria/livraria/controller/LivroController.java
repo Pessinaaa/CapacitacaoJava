@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import com.livraria.livraria.entity.Livro;
 import com.livraria.livraria.exception.LivroNaoEncontradoException;
 import com.livraria.livraria.service.LivroService;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1/livraria/livros")
 public class LivroController {
@@ -40,7 +42,7 @@ public class LivroController {
 		return livroSalvo;
 	}
 	
-	@GetMapping()
+	@GetMapping
 	public List<Livro> retornarTodosOsLivros() {
 		List<Livro> retorno = this.livroService.retornarTodosOsLivros();
 		return retorno;
