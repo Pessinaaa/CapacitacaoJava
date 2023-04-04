@@ -23,7 +23,11 @@ export class LivrosService {
     return this.http.post(`${this.api}/${this.endpoint}`, livro);
   }
 
-  editarLivro(id: number, livro: ILivro){
+  editarLivro(id: number, livro: ILivro) {
     return this.http.put(`${this.api}/${this.endpoint}/${id}`, livro);
+  }
+
+  deletarLivro(id: number) {
+    return this.http.delete(`${this.api}/${this.endpoint}/${id}`);
   }
 }

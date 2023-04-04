@@ -22,12 +22,13 @@ export class CadastrarAtualizarLivrosComponent {
 
   ngOnInit() {
   this.livroId = Number(this.route.snapshot.paramMap.get('id'));
+    if (this.livroId) {
     this.livrosService.buscarLivroPorId(this.livroId).subscribe((livro: ILivro) => {
       this.livroForm.setValue({
         titulo: livro.titulo,
         ano: livro.ano || 0
       })
-    });
+    })}
   }
 
   cadastrar() {

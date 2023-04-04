@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // A rota padrão do domínio direcioará para a rota home
   { path: 'home', component: HomeComponent},
   { path: 'livros', component: LivrosComponent},
+  { path: 'livros/deletar/:id', component: LivrosComponent},
   { path: 'livros/cadastrar', component: CadastrarAtualizarLivrosComponent},
   { path: 'livros/atualizar/:id', component: CadastrarAtualizarLivrosComponent},
   { path: 'sobre', component: SobreComponent}
