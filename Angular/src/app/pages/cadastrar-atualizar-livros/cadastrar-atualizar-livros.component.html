@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h1 class="display-6">{{ livroId ? 'Editar' : 'Cadastrar' }}</h1>
   <div class="container-fluid">
-    <form [formGroup]="livroForm" (ngSubmit)="cadastrar()">
+    <form [formGroup]="livroForm" (ngSubmit)="cadastraOuEdita()">
       <div class="row">
         <div class="col-3">
           <div class="mb-3">

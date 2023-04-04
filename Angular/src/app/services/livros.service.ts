@@ -22,4 +22,8 @@ export class LivrosService {
   cadastrarLivro(livro: ILivro) {
     return this.http.post(`${this.api}/${this.endpoint}`, livro);
   }
+
+  editarLivro(id: number, livro: ILivro){
+    return this.http.put(`${this.api}/${this.endpoint}/${id}`, livro);
+  }
 }
